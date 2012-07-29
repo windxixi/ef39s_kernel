@@ -1,0 +1,348 @@
+if CUST_SKY_H
+
+#
+# CUST SKY FEATURE SECTION
+#
+menu "CUST SKY FEATURE SECTION"
+
+config PANTECH
+	bool "PANTECH Common Configuration"
+	default y
+	help
+		Support PANTECH
+
+
+if MACH_MSM8X60_EF39S
+config DEFINE_LIST_EF39S
+	bool
+	default y
+	select SKY_EF39S_BOARD
+	select PANTECH_CAMERA
+	select SKY_GSBI12_UART_CONSOLE
+	select SKY_WLAN_MMC
+	select PANTECH_ERR_CRASH_LOGGING
+	select PANTECH_PWR_ONOFF_REASON_CNT
+	select SW_RESET
+	select PANTECH_WDOG_WORKAROUND
+	select PANTECH_EXT4_RO_REMOUNT_ON_EMERGENCY_RESET
+	select SKY_SND_EXTAMP
+	select SKY_SND_CTRL
+	select SKY_SND_VT_VOIP
+	select SKY_SND_MVS
+	select SKY_MMC
+	select F_SKYDISP_QBUG_FIX_BACKLIGHT
+	select F_SKYDISP_BOOT_LOGO_IN_KERNEL
+	select F_SKYDISP_LCD_RESET
+	select F_SKYDISP_LCD_FORCE_ONOFF
+	select F_SKYDISP_FRAMEBUFFER_32
+	select F_SKYDISP_NO_CURSOR_IN_BOOT
+	select F_SKYDISP_QBUG_FIX_MIPI_ERROR
+	select F_SKYDISP_HDMI_OPTION
+	select F_SKYDISP_FIX_OVERLAY_FLICKER
+	select F_SKYDISP_FIX_Y_CBCR_FLIP
+	select SKY_UPGRADE
+endif
+
+
+if MACH_MSM8X60_EF40S
+config DEFINE_LIST_EF40S
+	bool
+	default y
+	select SKY_EF40S_BOARD
+	select PANTECH_CAMERA
+	select SKY_GSBI12_UART_CONSOLE
+	select SKY_WLAN_MMC
+	select PANTECH_ERR_CRASH_LOGGING
+	select PANTECH_PWR_ONOFF_REASON_CNT
+	select SW_RESET
+	select PANTECH_WDOG_WORKAROUND
+	select PANTECH_EXT4_RO_REMOUNT_ON_EMERGENCY_RESET
+	select SKY_SND_EXTAMP
+	select SKY_SND_CTRL
+	select SKY_SND_VT_VOIP
+	select SKY_SND_MVS
+	select SKY_MMC
+	select F_SKYDISP_QBUG_FIX_BACKLIGHT
+	select F_SKYDISP_BOOT_LOGO_IN_KERNEL
+	select F_SKYDISP_LCD_RESET
+	select F_SKYDISP_LCD_FORCE_ONOFF
+	select F_SKYDISP_FRAMEBUFFER_32
+	select F_SKYDISP_NO_CURSOR_IN_BOOT
+	select F_SKYDISP_QBUG_FIX_MIPI_ERROR
+	select F_SKYDISP_HDMI_OPTION
+	select F_SKYDISP_FIX_OVERLAY_FLICKER
+	select F_SKYDISP_FIX_Y_CBCR_FLIP
+	select SKY_UPGRADE
+endif
+
+
+if MACH_MSM8X60_EF40K
+config DEFINE_LIST_EF40K
+	bool
+	default y
+	select SKY_EF40K_BOARD
+	select PANTECH_CAMERA
+	select SKY_GSBI12_UART_CONSOLE
+	select SKY_WLAN_MMC
+	select PANTECH_ERR_CRASH_LOGGING
+	select PANTECH_PWR_ONOFF_REASON_CNT
+	select SW_RESET
+	select PANTECH_WDOG_WORKAROUND
+	select PANTECH_EXT4_RO_REMOUNT_ON_EMERGENCY_RESET
+	select SKY_SND_EXTAMP
+	select SKY_SND_CTRL
+	select SKY_SND_VT_VOIP
+	select SKY_SND_MVS
+	select SKY_MMC
+	select F_SKYDISP_QBUG_FIX_BACKLIGHT
+	select F_SKYDISP_BOOT_LOGO_IN_KERNEL
+	select F_SKYDISP_LCD_RESET
+	select F_SKYDISP_LCD_FORCE_ONOFF
+	select F_SKYDISP_FRAMEBUFFER_32
+	select F_SKYDISP_NO_CURSOR_IN_BOOT
+	select F_SKYDISP_QBUG_FIX_MIPI_ERROR
+	select F_SKYDISP_HDMI_OPTION
+	select F_SKYDISP_FIX_OVERLAY_FLICKER
+	select F_SKYDISP_FIX_Y_CBCR_FLIP
+	select SKY_UPGRADE
+endif
+
+
+if MACH_MSM8X60_PRESTO
+config DEFINE_LIST_PRESTO
+	bool
+	default y
+	select PANTECH_PRESTO_BOARD
+	select PANTECH_CAMERA
+	select SKY_GSBI12_UART_CONSOLE
+	select PANTECH_MTP
+	select PANTECH_AUDIO_PRESTO_AUDIENCE2020
+	select PANTECH_AUDIO_PRESTO_FAB2200
+	select PANTECH_AUDIO_SUBCHIP_CAL_TOOL
+	select PANTECH_WIFI_MMC
+	select PANTECH_ERR_CRASH_LOGGING
+	select PANTECH_PWR_ONOFF_REASON_CNT
+	select SW_RESET
+	select PANTECH_WDOG_WORKAROUND
+	select PANTECH_EXT4_RO_REMOUNT_ON_EMERGENCY_RESET
+	select SKY_SND_CTRL
+	select SKY_MMC
+	select F_SKYDISP_QBUG_FIX_BACKLIGHT
+	select F_SKYDISP_BOOT_LOGO_IN_KERNEL
+	select F_SKYDISP_LCD_RESET
+	select F_SKYDISP_LCD_FORCE_ONOFF
+	select F_SKYDISP_FRAMEBUFFER_32
+	select F_SKYDISP_NO_CURSOR_IN_BOOT
+	select F_SKYDISP_BEAM_ON_BUG_FIX
+	select F_SKYDISP_FIX_OVERLAY_FLICKER
+	select F_SKYDISP_FIX_Y_CBCR_FLIP
+endif
+
+
+comment "SKY_EF39S_BOARD Configuration"
+config SKY_EF39S_BOARD
+	bool
+
+comment "SKY_EF40S_BOARD Configuration"
+config SKY_EF40S_BOARD
+	bool
+
+comment "SKY_EF40K_BOARD Configuration"
+config SKY_EF40K_BOARD
+	bool
+
+comment "PANTECH_PRESTO_BOARD Configuration"
+config PANTECH_PRESTO_BOARD
+	bool
+
+config PANTECH_CAMERA
+	bool
+
+comment "SKY_GSBI12_UART_CONSOLE Configuration"
+config SKY_GSBI12_UART_CONSOLE
+	bool
+
+comment "PANTECH_MTP Configuration"
+config PANTECH_MTP
+	bool
+
+config PANTECH_AUDIO_PRESTO_AUDIENCE2020
+	bool
+
+config PANTECH_AUDIO_PRESTO_FAB2200
+	bool
+
+config PANTECH_AUDIO_SUBCHIP_CAL_TOOL
+	bool
+
+config SKY_SND_CTRL
+	bool
+
+comment "PANTECH MMC Configuration"
+config SKY_MMC
+    bool
+
+comment "SKY WLAN"
+config SKY_WLAN
+	bool "EF39 WLAN"
+	default y
+	help
+		Support EF39 WLAN
+
+config PANMAC
+	bool "WLAN MAC ADDRESS"
+	default y
+	help
+		Support PANMAC
+
+config SKY_WLAN_MMC
+	bool		
+
+comment "PANTECH_ERR_CRASH_LOGGING Configuration"
+config PANTECH_ERR_CRASH_LOGGING
+	bool	
+
+# Added by Sungwook@LS4.2011-09-28
+# CONFIG_PANTECH_PWR_ONOFF_REASON_CNT
+comment "PANTECH_PWR_ONOFF_REASON_CNT Configuration"
+config PANTECH_PWR_ONOFF_REASON_CNT
+        bool
+
+# Added by Sungwook@LS4.2011-09-28
+# CONFIG_SW_RESET
+comment "SW_RESET Configuration"
+config SW_RESET
+        depends on PANTECH_ERR_CRASH_LOGGING
+	depends on PANTECH_PWR_ONOFF_REASON_CNT
+	bool
+
+config PANTECH_WDOG_WORKAROUND
+	depends on SW_RESET
+	bool
+
+# Added by Sungwook@LS4.2011-09-29
+# CONFIG_PANTECH_EXT4_RO_REMOUNT_ON_EMERGENCY_RESET
+#
+# Added by Sungwook@LS4.2011-09-29
+# Add options to the reboot syscall to remount filesystems ro
+# Auther: Ken Sumrall
+# Date: March 03rd, 2011
+# Reference from
+# http://us.generation-nt.com/answer/patch-syscalls-reboot-add-
+# options-reboot-syscall-remount-filesystems-ro-help-202386552.html
+#
+comment "SW_RESET Configuration"
+config PANTECH_EXT4_RO_REMOUNT_ON_EMERGENCY_RESET
+        bool
+	help
+		Add 4 new commands to the reboot system call, that do the same thing as the
+		RESTART, HALT, POWER_OFF, and RESTART2 commands, but also remount writable
+		filesystems as read-only just before doing what the command normally does.
+		Now that Android is using EXT4, and since we don't have a standard init
+		setup to unmount filesystems before rebooting, this allows the system to
+		reboot with clean filesystems, and also improves boot time as the journal
+		does not need to be replayed when mounting the filesystem.		
+
+if MACH_MSM8X60_PRESTO
+comment "SKY CHARGING by paiksun"
+config SKY_CHARGING
+        bool "SKY_CHARGING"
+        default y
+        help
+          	Support SKY CHARGING
+
+      	
+endif  
+
+if MACH_MSM8X60_EF39S
+comment "SKY SMB136S"
+config SKY_SMB_CHARGER
+	bool "SKY SMB136S"
+	default y
+	help
+		Support SKY SMB136S
+endif
+
+if MACH_MSM8X60_EF40K
+comment "SKY SMB136S"
+config SKY_SMB_CHARGER
+	bool "SKY SMB136S"
+	default y
+	help
+		Support SKY SMB136S
+endif
+
+if MACH_MSM8X60_EF40S
+comment "SKY SMB136S"
+config SKY_SMB_CHARGER
+	bool "SKY SMB136S"
+	default y
+	help
+		Support SKY SMB136S
+endif
+
+comment "SKY_BATTERY_MAX17040 by p14682 kobj"
+config SKY_BATTERY_MAX17040
+        bool "SKY_BATTERY_MAX17040"
+        default y
+        help
+          	Support SKY BATTERY MAX17040    
+
+config PANTECH_WIFI_MMC
+	bool
+    
+config SKY_SND_EXTAMP
+        bool 
+        
+config SKY_SND_CTRL
+        bool 
+
+config SKY_SND_VT_VOIP
+        bool 
+        
+config SKY_SND_MVS
+        bool 
+
+# LCD 2011.07.01 [PS1] Kang Seong-Goo
+config F_SKYDISP_QBUG_FIX_BACKLIGHT
+        bool 
+
+config F_SKYDISP_BOOT_LOGO_IN_KERNEL
+        bool 
+
+config F_SKYDISP_LCD_RESET
+        bool 
+
+config F_SKYDISP_LCD_FORCE_ONOFF
+        bool 
+
+config F_SKYDISP_QBUG_FIX_MIPI_ERROR
+        bool 
+
+config F_SKYDISP_FRAMEBUFFER_32
+        bool 
+
+config F_SKYDISP_NO_CURSOR_IN_BOOT
+        bool 
+
+config F_SKYDISP_HDMI_OPTION
+        bool 
+
+config F_SKYDISP_USE_ASHMEM
+        bool 
+
+config F_SKYDISP_FIX_OVERLAY_FLICKER
+        bool 
+
+config F_SKYDISP_FIX_Y_CBCR_FLIP
+        bool 
+
+config F_SKYDISP_BEAM_ON_BUG_FIX
+        bool 
+
+# p14777 upgrade jang
+config SKY_UPGRADE
+		bool
+endmenu
+
+endif

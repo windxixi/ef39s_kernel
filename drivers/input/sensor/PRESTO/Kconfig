@@ -1,0 +1,4 @@
+source "drivers/input/sensor/PRESTO/accelerometer/Kconfig"
+source "drivers/input/sensor/PRESTO/geomagnetic/Kconfig"
+source "drivers/input/sensor/PRESTO/orientation/Kconfig"
+source "drivers/input/sensor/PRESTO/proximity/Kconfig"

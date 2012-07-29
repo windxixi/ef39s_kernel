@@ -1,0 +1,7 @@
+--- include/linux/Kbuild
++++ include/linux/Kbuild
+@@ -408,3 +409,4 @@
+ header-y += msm_audio_wma.h
+ header-y += msm_audio_wmapro.h
+ header-y += qcedev.h
++header-y += genlock.h

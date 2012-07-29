@@ -1,0 +1,21 @@
+#
+# Earjack driver configuration
+#
+
+menuconfig INPUT_EARJACK
+	bool "Earjack"
+	default y
+	help 
+	  Say Y here, and a list of supported sensorss will be displayed.
+	  This option doesn't affect the kernel.
+
+	  If unsure, say Y.
+
+if INPUT_EARJACK
+
+config INPUT_PANTECH_EARJACK
+	tristate "Pantech Earjack Device"
+	default y
+	help
+	  Say Y here if you have pantech earjack.
+endif

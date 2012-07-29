@@ -1,0 +1,63 @@
+config BCM4330_B2
+	tristate "Broadcom BCM4330 wireless chip support"
+	depends on WIRELESS_EXT && MMC
+	---help---
+	  This module adds support for wireless adapters based on
+	  Broadcom 4330 chipset.
+
+	  This driver uses the kernel's wireless extensions subsystem.
+
+config BCM4330_WL_RESET_GPIO
+	depends on BCM4330_B2
+	int "BCM4330 WLAN Reset GPIO number"
+	default 135
+
+config BCM4330_FW_PATH
+	depends on BCM4330_B2
+	string "Firmware path"
+	default "/etc/wl/bcm4330.bin"
+	---help---
+	  Path to the firmware file.
+
+config BCM4330_NVRAM_PATH
+	depends on BCM4330_B2
+	string "NVRAM path"
+	default "/etc/wl/nvram.txt"
+	---help---
+	  Path to the nvram file.
+
+config BCM4330_IFACE_NAME
+	depends on BCM4330_B2
+	string "Wireless network interface name"
+	default "wlan"
+
+config BCM4330_DEBUG
+	depends on BCM4330_B2
+	bool "Debug"
+	default n
+
+config BCM4330_SOFTAP
+	depends on BCM4330_B2
+	bool "Support SoftAP function"
+	default y
+
+config BCM4330_OOB_GPIO
+	depends on BCM4330_B2
+	int "BCM4330 out-of-band GPIO number"
+	default 126
+
+config BCM4330_ROAM_ENABLE
+	depends on BCM4330_B2
+	bool "Enable roaming"
+	default n
+
+config BCM4330_USE_CSCAN
+	depends on BCM4330_B2
+	bool "Using combo scan"
+	default n
+
+config BCM4330_HT_WEP_ENABLE
+	depends on BCM4330_B2
+	bool "Enable HT_WEP"
+	default n
+

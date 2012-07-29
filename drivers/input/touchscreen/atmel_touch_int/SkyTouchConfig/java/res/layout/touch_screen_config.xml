@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+ 
+ 
+<TextView 
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content"
+	android:id="@+id/tv_touch_config"
+   	android:text="@string/str_touch_config"	
+   	android:textSize="20sp"
+    />
+ 
+
+<Button
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:id="@+id/button_load"
+	android:text="@string/str_button_load_config"
+   	android:textSize="20sp"
+/>
+<Button
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:id="@+id/button_apply"
+	android:text="@string/str_button_apply_config"
+   	android:textSize="20sp"
+/>
+ 
+ 
+</LinearLayout>
+

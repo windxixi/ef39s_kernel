@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="str_touch_config">touch config setting</string>
+    <string name="str_button_load_config">load config file</string>
+    <string name="str_button_apply_config">apply config</string>
+    <string name="app_name">Touch Config</string>
+</resources>
